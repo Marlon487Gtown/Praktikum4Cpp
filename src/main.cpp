@@ -9,7 +9,7 @@ using namespace std;
 #include "Widerstand.hpp"
 #include "VoltageSource.hpp"
 
-
+//penis
 
 int main() 
 {    
