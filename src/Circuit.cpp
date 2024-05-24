@@ -9,7 +9,7 @@ Circuit::Circuit() {};
 Circuit::~Circuit() {};
 
 
-void Circuit::add_component(unique_ptr<Component> component)
+void Circuit::add_component(shared_ptr<Component> component)
 {
 	this->components.push_back(move(component));
 };
