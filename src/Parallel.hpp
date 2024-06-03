@@ -18,8 +18,5 @@ public:
 
 
 private:
-    /*double ParallelResult=0.0;
-    double Uparallel = 0.0;
-    double Iparallel = 0.0;*/
-    
+
 };

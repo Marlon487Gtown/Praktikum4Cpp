@@ -13,14 +13,12 @@ public:
     string get_name();
     double get_resistance();
     double get_voltage();
-    double get_current();
     virtual void print()=0;
 
 protected:
     string ComponentName="";
-    double ComponentResistance = 0.0;
-    double ComponentVoltage = 0.0;
-    //double value = 0.0;
-    double ComponentCurrent = 0.0;
+    double ComponentResistance {0.0};
+    double ComponentVoltage{ 0.0 };
+    double ComponentCurrent{ 0.0 };
 
 };

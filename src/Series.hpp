@@ -19,7 +19,4 @@ public:
 
 private:
 
-   /* double SeriesResult = 0.0;
-    double Useries = 0.0;
-    double Iseries = 0.0;*/
 };

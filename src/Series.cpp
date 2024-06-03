@@ -1,5 +1,6 @@
 #include "Series.hpp"
-
+#include<iostream>
+using namespace std;
 
 Series::Series() {};
 Series::~Series(){};
@@ -14,7 +15,7 @@ void Series::print()
 
 double Series::calculateResistance()
 {
-	double result = 0.0;
+	double result{ 0.0 };
 
 	for (const auto& component : this->components) {
 
@@ -25,7 +26,7 @@ double Series::calculateResistance()
 
 double Series::calculateVoltage()
 {
-	double result = 0.0;
+	double result{ 0.0 };
 
 	for (const auto& component : this->components) {
 
@@ -37,10 +38,13 @@ double Series::calculateVoltage()
 
 double Series::calculateCurrent()
 {
-	double result = 0.0;
+	double result{ 0.0 };
 
-	result = (this->calculateVoltage() / this->calculateResistance());
-
+	if (this->calculateResistance() != 0) {
+		result = (this->calculateVoltage() / this->calculateResistance());
+	}
+	else cout << "Geteilt durch 0" << endl;
+		 
 
 	return result;
 };

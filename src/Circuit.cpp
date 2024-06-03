@@ -15,21 +15,37 @@ void Circuit::add_component(shared_ptr<Component> component)
 };
 
 
-void Circuit::print()
-{
-	for (const auto& component : this->components) {
+//void Circuit::print()
+//{
+//	for (const auto& component : this->components) {
+//
+//		cout << component->get_name() << endl;
+//
+//		if (component->get_resistance() != 0)
+//		{
+//			cout << component->get_resistance() << endl;
+//		}
+//
+//		else if(component->get_voltage() != 0)
+//		{
+//			cout << component->get_voltage() << endl;
+//		}
+//	}
+//
+//};
 
-		cout << component->get_name() << endl;
 
-		if (component->get_resistance() != 0)
-		{
-			cout << component->get_resistance() << endl;
-		}
+double Circuit::getResistance() {
 
-		else if(component->get_voltage() != 0)
-		{
-			cout << component->get_voltage() << endl;
-		}
-	}
+	return this->calculateResistance();
+};
 
+double Circuit::getVoltage() {
+
+	return this->calculateVoltage();
+};
+
+double Circuit::getCurrent() {
+
+	return this->calculateCurrent();
 };

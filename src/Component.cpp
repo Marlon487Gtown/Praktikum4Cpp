@@ -20,10 +20,3 @@ double Component::get_voltage()
 {
 	return this->ComponentVoltage;
 };
-
-double Component::get_current()
-{
-	//this->ComponentCurrent = (this->ComponentVoltage / this->ComponentResistance);
-
-	return this->ComponentCurrent;
-};

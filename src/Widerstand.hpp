@@ -13,7 +13,7 @@ class Widerstand : public Component {
 
 public:
 	Widerstand(string name, double wert);
-	~Widerstand();
+	~Widerstand()=default;
 	void print();
 
 private:

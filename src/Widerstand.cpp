@@ -6,9 +6,7 @@ Widerstand::Widerstand(string name, double wert)
 	this->ComponentResistance = wert;
 };
 
-Widerstand::~Widerstand()
-{
-};
+
 
 void Widerstand::print() {
 

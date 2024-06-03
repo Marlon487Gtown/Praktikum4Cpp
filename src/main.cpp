@@ -9,11 +9,10 @@ using namespace std;
 #include "Widerstand.hpp"
 #include "VoltageSource.hpp"
 
-//penis
 
 int main() 
 {    
-
+    
     //Teilschaltung 1
     cout << "Teilschaltung 1" << endl;
     auto V1 = make_shared<VoltageSource>("V1", 10);
@@ -23,11 +22,14 @@ int main()
     series1.add_component(R1);
     series1.add_component(R2);
     series1.add_component(V1);
-    auto s1GesamtWiderstand = make_shared<Widerstand>("", series1.calculateResistance());
+    auto s1GesamtWiderstand = make_shared<Widerstand>("", series1.getResistance());
 
-    series1.calculateResistance();
-    series1.calculateVoltage();
-    series1.calculateCurrent();
+    series1.getResistance();
+    series1.getVoltage();
+    series1.getCurrent();
+    //series1.calculateResistance();
+    //series1.calculateVoltage();
+    //series1.calculateCurrent();
     series1.print();
 
     //Teilschaltung 2
@@ -38,12 +40,15 @@ int main()
     Parallel parallel1;
     parallel1.add_component(R3);
     parallel1.add_component(R4);
-    auto p1GesamtWiderstand = make_shared<Widerstand>("", parallel1.calculateResistance());
+    auto p1GesamtWiderstand = make_shared<Widerstand>("", parallel1.getResistance());
     parallel1.add_component(V2);
 
-    parallel1.calculateResistance();
-    parallel1.calculateVoltage();
-    parallel1.calculateCurrent();
+    parallel1.getResistance();    
+    parallel1.getVoltage();
+    parallel1.getCurrent();
+    //parallel1.calculateResistance();
+    //parallel1.calculateVoltage();
+    //parallel1.calculateCurrent();
     parallel1.print();
 
     //Teilschaltung 3
@@ -54,12 +59,15 @@ int main()
     Parallel parallel2;
     parallel2.add_component(R5);
     parallel2.add_component(R6);
-    auto p2GesamtWiderstand = make_shared<Widerstand>("", parallel2.calculateResistance());
+    auto p2GesamtWiderstand = make_shared<Widerstand>("", parallel2.getResistance());
     parallel2.add_component(V3);
 
-    parallel2.calculateResistance();
-    parallel2.calculateVoltage();
-    parallel2.calculateCurrent();
+    parallel2.getResistance();
+    parallel2.getVoltage();
+    parallel2.getCurrent();
+    //parallel2.calculateResistance();
+    //parallel2.calculateVoltage();
+    //parallel2.calculateCurrent();
     parallel2.print();
 
 
@@ -73,9 +81,12 @@ int main()
     seriesN.add_component(V2);
     seriesN.add_component(V3);
 
-    seriesN.calculateResistance();
-    seriesN.calculateVoltage();
-    seriesN.calculateCurrent();
+    seriesN.getResistance();
+    seriesN.getVoltage();
+    seriesN.getCurrent();
+    //seriesN.calculateResistance();
+    //seriesN.calculateVoltage();
+    //seriesN.calculateCurrent();
     seriesN.print();
 
     //Alle Teilschaltungen jeweils Parallel
@@ -88,12 +99,15 @@ int main()
     paralellN.add_component(V2);
     paralellN.add_component(V3);
 
-    paralellN.calculateResistance();
-    paralellN.calculateVoltage();
-    paralellN.calculateCurrent();
+    paralellN.getResistance();
+    paralellN.getVoltage();
+    paralellN.getCurrent();
+    //paralellN.calculateResistance();
+    //paralellN.calculateVoltage();
+    //paralellN.calculateCurrent();
     paralellN.print();
+    
 
 
-    cin.get();
     return 0;
 }

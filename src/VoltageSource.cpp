@@ -18,8 +18,3 @@ void VoltageSource:: print()
 	}
 };
 
-
-//double VoltageSource::get_voltage()
-//{
-//	return this->voltage;
-//};

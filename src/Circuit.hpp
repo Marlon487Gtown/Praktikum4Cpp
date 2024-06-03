@@ -12,9 +12,11 @@ class Circuit :public Component {
     
 
 protected:
-    //vector<Component*> components; //erzeugen eines Vektor worin alles gespeichert ist
-    vector<shared_ptr<Component>> components;
 
+    vector<shared_ptr<Component>> components;
+    virtual double calculateResistance() = 0;
+    virtual double calculateVoltage() = 0;
+    virtual double calculateCurrent() = 0;
 
     
 public:
@@ -22,8 +24,9 @@ public:
     Circuit();
     ~Circuit();
     void add_component(shared_ptr<Component> component);
-    void print();
-    virtual double calculateResistance() = 0;
-    virtual double calculateVoltage() = 0;
-    virtual double calculateCurrent() = 0;
+    virtual void print()=0;
+    double getResistance();
+    double getVoltage();
+    double getCurrent();
+
 };
